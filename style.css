@@ -1,0 +1,182 @@
+/*
+Theme Name: RealFoodHome
+Theme URI: https://realfoodhome.com
+Author: RealFood Team
+Description: Custom food blog & recipe theme.
+Version: 0.1.0
+Text Domain: realfoodhome
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #222;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+/* Layout */
+
+.site-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+}
+
+/* Header / Nav */
+
+.site-header {
+    border-bottom: 1px solid #eee;
+    padding: 18px 0;
+    margin-bottom: 24px;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-title a {
+    font-family: 'Bebas Neue', system-ui, sans-serif;
+    font-size: 32px;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    color: #111;
+    text-transform: uppercase;
+}
+
+.primary-nav {
+    display: flex;
+    gap: 28px;
+}
+
+.primary-nav a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    color: #444;
+}
+
+.primary-nav a:hover,
+.primary-nav .current-menu-item > a {
+    color: #000;
+}
+
+/* Main layout */
+
+.content-with-sidebar {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
+    gap: 40px;
+}
+
+@media (max-width: 900px) {
+    .content-with-sidebar {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Post cards */
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.post-card {
+    border-radius: 14px;
+    border: 1px solid #eee;
+    overflow: hidden;
+    background: #fff;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+}
+
+.post-card-thumb img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.post-card-body {
+    padding: 16px 18px 18px;
+}
+
+.post-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 6px;
+}
+
+.post-card-meta {
+    font-size: 12px;
+    color: #777;
+}
+
+/* Single post */
+
+.single-title {
+    font-family: 'Bebas Neue', system-ui, sans-serif;
+    font-size: 42px;
+    letter-spacing: 0.06em;
+    margin: 0 0 10px;
+}
+
+.single-meta {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.single-featured {
+    margin: 20px 0 30px;
+}
+
+.single-featured img {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+}
+
+/* Sidebar */
+
+.sidebar-area {
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    background: #fafafa;
+    font-size: 14px;
+}
+
+.sidebar-area h3 {
+    font-size: 16px;
+    margin-top: 0;
+}
+
+/* Footer */
+
+.site-footer {
+    border-top: 1px solid #eee;
+    padding: 24px 0;
+    font-size: 13px;
+    color: #777;
+    text-align: center;
+}
